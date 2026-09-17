@@ -1,8 +1,44 @@
 /* =====================================
    SMART GYM BY ZOHAIB
-   IMAGE SLIDER
 ===================================== */
 
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+function toggleMenu() {
+
+    const navMenu = document.getElementById("navMenu");
+
+    navMenu.classList.toggle("active");
+
+}
+
+
+/* Close mobile menu after
+   clicking a navigation link */
+
+const navigationLinks = document.querySelectorAll("#navMenu a");
+
+
+navigationLinks.forEach(function (link) {
+
+    link.addEventListener("click", function () {
+
+        document
+            .getElementById("navMenu")
+            .classList.remove("active");
+
+    });
+
+});
+
+
+
+/* =========================
+   GYM IMAGE SLIDER
+========================= */
 
 const gymImages = [
 
@@ -21,18 +57,21 @@ const gymImages = [
 let currentImage = 0;
 
 
-const gymImage = document.getElementById("gymImage");
+const gymImage =
+    document.getElementById("gymImage");
 
-const dots = document.querySelectorAll(".dot");
+
+const dots =
+    document.querySelectorAll(".dot");
 
 
 let autoSlide;
 
 
 
-/* =====================================
+/* =========================
    SHOW IMAGE
-===================================== */
+========================= */
 
 function showImage(index) {
 
@@ -53,9 +92,9 @@ function showImage(index) {
 
 
 
-/* =====================================
-   NEXT IMAGE
-===================================== */
+/* =========================
+   NEXT
+========================= */
 
 function nextImage() {
 
@@ -69,13 +108,15 @@ function nextImage() {
 
     showImage(currentImage);
 
+    resetAutoSlide();
+
 }
 
 
 
-/* =====================================
-   PREVIOUS IMAGE
-===================================== */
+/* =========================
+   PREVIOUS
+========================= */
 
 function previousImage() {
 
@@ -89,13 +130,15 @@ function previousImage() {
 
     showImage(currentImage);
 
+    resetAutoSlide();
+
 }
 
 
 
-/* =====================================
-   UPDATE DOTS
-===================================== */
+/* =========================
+   DOTS
+========================= */
 
 function updateDots() {
 
@@ -117,15 +160,23 @@ function updateDots() {
 
 
 
-/* =====================================
-   AUTOMATIC SLIDER
-===================================== */
+/* =========================
+   AUTOMATIC ROTATION
+========================= */
 
 function startAutoSlide() {
 
     autoSlide = setInterval(function () {
 
-        nextImage();
+        currentImage++;
+
+        if (currentImage >= gymImages.length) {
+
+            currentImage = 0;
+
+        }
+
+        showImage(currentImage);
 
     }, 4000);
 
@@ -140,10 +191,5 @@ function resetAutoSlide() {
 
 }
 
-
-
-/* =====================================
-   START SLIDER
-===================================== */
 
 startAutoSlide();
