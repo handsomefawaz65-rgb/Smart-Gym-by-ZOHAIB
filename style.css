@@ -1,0 +1,1269 @@
+/* =====================================
+   SMART GYM BY ZOHAIB
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #000;
+    color: #fff;
+    line-height: 1.6;
+}
+
+
+/* =====================================
+   NAVIGATION
+===================================== */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 75px;
+    background: rgba(0, 0, 0, 0.94);
+    border-bottom: 2px solid #e00000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 6%;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+
+/* LOGO IMAGE */
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+
+.logo img {
+    width: 150px;
+    height: 58px;
+    object-fit: contain;
+    display: block;
+}
+
+
+/* NAVIGATION LINKS */
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+
+.navbar nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+
+.navbar nav a:hover {
+    color: #ffd400;
+}
+
+
+/* =====================================
+   HERO
+===================================== */
+
+.hero {
+    min-height: 100vh;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.80)
+        ),
+        url("hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 110px 20px 40px;
+}
+
+
+.hero-overlay {
+    max-width: 1000px;
+}
+
+
+.hero-small {
+    color: #ffd400;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 6px;
+    margin-bottom: 15px;
+}
+
+
+.hero h1 {
+    font-size: clamp(55px, 9vw, 115px);
+    font-weight: 900;
+    letter-spacing: 8px;
+    line-height: 1;
+
+    text-shadow:
+        0 0 10px #e00000,
+        0 0 30px #e00000;
+}
+
+
+.hero h2 {
+    font-size: clamp(25px, 4vw, 45px);
+    color: #ffd400;
+    letter-spacing: 8px;
+    margin-top: 15px;
+}
+
+
+.hero-slogan {
+    font-size: clamp(20px, 3vw, 32px);
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-top: 30px;
+}
+
+
+.hero-slogan span {
+    color: #e00000;
+}
+
+
+.hero-description {
+    color: #ddd;
+    font-size: 17px;
+    margin-top: 15px;
+}
+
+
+/* =====================================
+   BUTTONS
+===================================== */
+
+.hero-button,
+.red-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 30px;
+
+    background: #e00000;
+    border: 2px solid #e00000;
+
+    color: #fff;
+    text-decoration: none;
+
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+
+.hero-button:hover,
+.red-button:hover {
+    background: #ffd400;
+    border-color: #ffd400;
+    color: #000;
+    transform: translateY(-3px);
+}
+
+
+/* =====================================
+   GENERAL SECTIONS
+===================================== */
+
+section {
+    padding: 100px 8%;
+}
+
+
+section h2 {
+    font-size: clamp(32px, 5vw, 50px);
+    text-align: center;
+    line-height: 1.1;
+    margin-bottom: 55px;
+}
+
+
+section h2 span {
+    color: #e00000;
+}
+
+
+section h2::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    background: #ffd400;
+    margin: 15px auto 0;
+}
+
+
+.section-label {
+    text-align: center;
+    color: #ffd400;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+
+/* =====================================
+   TRAINER
+===================================== */
+
+.trainer {
+    min-height: 650px;
+    background: #080808;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 70px;
+}
+
+
+.trainer-text {
+    flex: 1;
+}
+
+
+.trainer-text h2 {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+
+.trainer-text h2::after {
+    margin-left: 0;
+}
+
+
+.trainer-text h3 {
+    color: #ffd400;
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+
+.trainer-text p:not(.section-label) {
+    color: #ccc;
+    font-size: 17px;
+    margin-bottom: 20px;
+    max-width: 650px;
+}
+
+
+.trainer-text .section-label {
+    text-align: left;
+}
+
+
+.trainer-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+
+.trainer-image img {
+    width: 100%;
+    max-width: 420px;
+    height: 500px;
+
+    object-fit: cover;
+
+    border: 4px solid #e00000;
+
+    box-shadow:
+        0 0 30px rgba(224, 0, 0, 0.4);
+
+    transition: 0.4s;
+}
+
+
+.trainer-image img:hover {
+    transform: scale(1.02);
+}
+
+
+/* =====================================
+   GYM
+===================================== */
+
+.gym-section {
+    background: #000;
+}
+
+
+.gym-content {
+    max-width: 1250px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 80px;
+}
+
+
+.gym-slider-area {
+    flex: 1;
+}
+
+
+.gym-slider-area .section-label {
+    text-align: left;
+}
+
+
+.slider {
+    position: relative;
+
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+
+    overflow: hidden;
+
+    border: 3px solid #e00000;
+
+    box-shadow:
+        0 0 25px rgba(224, 0, 0, 0.35);
+}
+
+
+.slider img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    opacity: 1;
+
+    transition: opacity 0.4s ease;
+}
+
+
+/* =====================================
+   SLIDER ARROWS
+===================================== */
+
+.slider-arrow {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 48px;
+    height: 65px;
+
+    border: none;
+
+    background: rgba(0, 0, 0, 0.75);
+
+    color: #fff;
+
+    font-size: 35px;
+
+    cursor: pointer;
+
+    z-index: 5;
+
+    transition: 0.3s;
+}
+
+
+.slider-arrow:hover {
+    background: #e00000;
+}
+
+
+.left-arrow {
+    left: 0;
+}
+
+
+.right-arrow {
+    right: 0;
+}
+
+
+/* DOTS */
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 15px;
+}
+
+
+.dot {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #555;
+
+    transition: 0.3s;
+}
+
+
+.dot.active {
+    background: #e00000;
+    transform: scale(1.4);
+}
+
+
+/* GYM TEXT */
+
+.gym-text {
+    flex: 1;
+}
+
+
+.gym-text h2 {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+
+.gym-text h2::after {
+    margin-left: 0;
+}
+
+
+.gym-text h3 {
+    color: #ffd400;
+    font-size: 23px;
+    line-height: 1.4;
+    margin-bottom: 25px;
+}
+
+
+.gym-text p:not(.section-label) {
+    color: #ccc;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+
+/* =====================================
+   TIMINGS
+===================================== */
+
+.timings {
+    background: #080808;
+    text-align: center;
+}
+
+
+.timings-container {
+    max-width: 1150px;
+    margin: auto;
+
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+
+.timing-box {
+    flex: 1;
+
+    padding: 40px 25px;
+
+    background: #111;
+
+    border: 2px solid #333;
+
+    transition: 0.3s;
+}
+
+
+.timing-box:hover {
+    transform: translateY(-8px);
+
+    border-color: #e00000;
+
+    box-shadow:
+        0 10px 30px rgba(224, 0, 0, 0.3);
+}
+
+
+.timing-box.female {
+    border-color: #ffd400;
+}
+
+
+.timing-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+
+.timing-box h3 {
+    color: #e00000;
+    font-size: 26px;
+    letter-spacing: 2px;
+}
+
+
+.timing-box.female h3 {
+    color: #ffd400;
+}
+
+
+.timing-title {
+    color: #999;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin: 10px 0 20px;
+}
+
+
+.time {
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+.time span {
+    color: #e00000;
+    margin: 0 5px;
+}
+
+
+/* =====================================
+   MEMBERSHIP PLANS
+===================================== */
+
+.plans {
+    background: #000;
+    text-align: center;
+}
+
+
+.plans-container {
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+
+    gap: 30px;
+
+    align-items: stretch;
+}
+
+
+.plan {
+    position: relative;
+
+    flex: 1;
+    max-width: 360px;
+
+    padding: 40px 30px;
+
+    background: #111;
+
+    border: 2px solid #333;
+
+    transition: 0.4s;
+}
+
+
+.plan:hover {
+    transform: translateY(-10px);
+    border-color: #e00000;
+}
+
+
+.plan.featured {
+    border: 2px solid #ffd400;
+    transform: scale(1.05);
+}
+
+
+.plan.featured:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+
+/* PLAN TITLE */
+
+.plan-top {
+    color: #ffd400;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =====================================
+   PRICES
+===================================== */
+
+.price-row {
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 25px;
+}
+
+
+.price {
+    flex: 1;
+
+    padding: 15px 8px;
+
+    background: #080808;
+
+    border: 1px solid #333;
+}
+
+
+.price .gender {
+    display: block;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 7px;
+}
+
+
+.price strong {
+    display: block;
+
+    font-size: 21px;
+
+    white-space: nowrap;
+}
+
+
+.male-price {
+    border-top: 3px solid #e00000;
+}
+
+
+.male-price .gender,
+.male-price strong {
+    color: #e00000;
+}
+
+
+.female-price {
+    border-top: 3px solid #ffd400;
+}
+
+
+.female-price .gender,
+.female-price strong {
+    color: #ffd400;
+}
+
+
+/* FEATURES */
+
+.plan ul {
+    list-style: none;
+
+    text-align: left;
+
+    margin-bottom: 25px;
+}
+
+
+.plan li {
+    padding: 10px 0;
+
+    border-bottom: 1px solid #222;
+
+    color: #ddd;
+}
+
+
+/* PLAN BUTTON */
+
+.plan-button {
+    display: block;
+
+    padding: 12px;
+
+    background: #e00000;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.plan-button:hover {
+    background: #ffd400;
+    color: #000;
+}
+
+
+/* POPULAR */
+
+.popular {
+    position: absolute;
+
+    top: -15px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: #ffd400;
+
+    color: #000;
+
+    padding: 5px 18px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+
+/* =====================================
+   CONTACT
+===================================== */
+
+.contact {
+    background: #080808;
+    text-align: center;
+}
+
+
+.contact-container {
+    max-width: 1000px;
+    margin: auto;
+
+    display: flex;
+
+    gap: 30px;
+
+    justify-content: center;
+}
+
+
+.contact-box {
+    flex: 1;
+
+    padding: 35px 25px;
+
+    background: #111;
+
+    border: 2px solid #333;
+
+    transition: 0.3s;
+}
+
+
+.contact-box:hover {
+    border-color: #e00000;
+    transform: translateY(-5px);
+}
+
+
+.contact-icon {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+
+.contact-box h3 {
+    color: #ffd400;
+
+    font-size: 22px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+
+.phone-number {
+    font-size: 22px;
+
+    font-weight: bold;
+
+    color: #fff;
+
+    margin-bottom: 20px;
+}
+
+
+.contact-box > p:not(.phone-number) {
+    color: #ccc;
+
+    font-size: 15px;
+
+    margin-bottom: 20px;
+}
+
+
+/* CONTACT BUTTONS */
+
+.contact-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    margin-top: 20px;
+}
+
+
+.contact-button {
+    padding: 11px 16px;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+    border: 2px solid;
+}
+
+
+.contact-button.call,
+.contact-button.google {
+    background: #e00000;
+    border-color: #e00000;
+    color: #fff;
+}
+
+
+.contact-button.whatsapp,
+.contact-button.indrive {
+    background: #ffd400;
+    border-color: #ffd400;
+    color: #000;
+}
+
+
+.contact-button:hover {
+    background: #fff;
+
+    border-color: #fff;
+
+    color: #000;
+
+    transform: translateY(-3px);
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+    padding: 35px 20px;
+
+    background: #050505;
+
+    border-top: 1px solid #222;
+
+    text-align: center;
+}
+
+
+.footer-logo {
+    font-size: 25px;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+}
+
+
+.footer-logo span {
+    color: #e00000;
+}
+
+
+footer > p {
+    color: #ffd400;
+
+    letter-spacing: 3px;
+
+    font-size: 11px;
+}
+
+
+footer .copyright {
+    color: #666;
+
+    letter-spacing: 0;
+
+    margin-top: 15px;
+
+    font-size: 12px;
+}
+
+
+/* =====================================
+   TABLETS
+===================================== */
+
+@media (max-width: 950px) {
+
+    .navbar {
+        padding: 8px 3%;
+    }
+
+
+    .navbar nav {
+        gap: 15px;
+    }
+
+
+    .navbar nav a {
+        font-size: 11px;
+    }
+
+
+    .gym-content {
+        gap: 40px;
+    }
+
+
+    .slider {
+        height: 350px;
+    }
+
+
+    .price strong {
+        font-size: 17px;
+    }
+
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 700px) {
+
+    /* NAVIGATION */
+
+    .navbar {
+        min-height: 70px;
+
+        padding: 8px 10px;
+
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+
+    .logo img {
+        width: 135px;
+        height: 48px;
+    }
+
+
+    .navbar nav {
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 8px 12px;
+
+        flex-wrap: wrap;
+    }
+
+
+    .navbar nav a {
+        font-size: 9px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        padding-top: 150px;
+    }
+
+
+    .hero h1 {
+        letter-spacing: 4px;
+    }
+
+
+    .hero h2 {
+        letter-spacing: 4px;
+    }
+
+
+    .hero-slogan {
+        font-size: 20px;
+    }
+
+
+    /* SECTIONS */
+
+    section {
+        padding: 80px 6%;
+    }
+
+
+    /* TRAINER */
+
+    .trainer {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 40px;
+    }
+
+
+    .trainer-text h2 {
+        text-align: center;
+    }
+
+
+    .trainer-text h2::after {
+        margin: 15px auto 0;
+    }
+
+
+    .trainer-text .section-label {
+        text-align: center;
+    }
+
+
+    .trainer-image img {
+        height: 400px;
+    }
+
+
+    /* GYM */
+
+    .gym-content {
+        flex-direction: column;
+
+        gap: 50px;
+    }
+
+
+    .gym-slider-area {
+        width: 100%;
+    }
+
+
+    .gym-slider-area .section-label {
+        text-align: center;
+    }
+
+
+    .slider {
+        max-width: 100%;
+        height: 320px;
+    }
+
+
+    .gym-text {
+        width: 100%;
+        text-align: center;
+    }
+
+
+    .gym-text h2 {
+        text-align: center;
+    }
+
+
+    .gym-text h2::after {
+        margin: 15px auto 0;
+    }
+
+
+    /* TIMINGS */
+
+    .timings-container {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+    .timing-box {
+        width: 100%;
+
+        max-width: 400px;
+    }
+
+
+    /* PLANS */
+
+    .plans-container {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+    .plan {
+        width: 100%;
+
+        max-width: 400px;
+    }
+
+
+    .plan.featured {
+        transform: none;
+    }
+
+
+    .plan.featured:hover {
+        transform: translateY(-10px);
+    }
+
+
+    .price strong {
+        font-size: 20px;
+    }
+
+
+    /* CONTACT */
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+
+    .contact-box {
+        width: 100%;
+    }
+
+
+    .contact-buttons {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+    .contact-button {
+        width: 100%;
+
+        max-width: 280px;
+    }
+
+}
+
+
+/* =====================================
+   SMALL PHONES
+===================================== */
+
+@media (max-width: 400px) {
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+
+    .hero-slogan {
+        font-size: 17px;
+    }
+
+
+    .slider {
+        height: 270px;
+    }
+
+
+    .slider-arrow {
+        width: 40px;
+
+        height: 55px;
+
+        font-size: 28px;
+    }
+
+
+    .trainer-image img {
+        height: 350px;
+    }
+
+
+    .price {
+        padding: 12px 5px;
+    }
+
+
+    .price strong {
+        font-size: 17px;
+    }
+
+}
