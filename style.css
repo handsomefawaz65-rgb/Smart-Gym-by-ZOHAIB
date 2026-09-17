@@ -1,18 +1,12 @@
-/* =====================================
-   SMART GYM BY ZOHAIB
-===================================== */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
 html {
     scroll-behavior: smooth;
 }
-
 
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -22,9 +16,9 @@ body {
 }
 
 
-/* =====================================
+/* =========================
    NAVIGATION
-===================================== */
+========================= */
 
 .navbar {
     position: fixed;
@@ -32,18 +26,23 @@ body {
     left: 0;
     width: 100%;
     min-height: 75px;
+
     background: rgba(0, 0, 0, 0.94);
     border-bottom: 2px solid #e00000;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     padding: 8px 6%;
+
     z-index: 1000;
+
     backdrop-filter: blur(10px);
 }
 
 
-/* LOGO IMAGE */
+/* LOGO */
 
 .logo {
     display: flex;
@@ -54,12 +53,32 @@ body {
 .logo img {
     width: 150px;
     height: 58px;
+
     object-fit: contain;
+
     display: block;
 }
 
 
-/* NAVIGATION LINKS */
+/* HAMBURGER */
+
+.menu-toggle {
+    display: none;
+
+    background: transparent;
+    border: none;
+
+    color: #fff;
+
+    font-size: 32px;
+
+    cursor: pointer;
+
+    line-height: 1;
+}
+
+
+/* NAV LINKS */
 
 .navbar nav {
     display: flex;
@@ -70,10 +89,15 @@ body {
 
 .navbar nav a {
     color: #fff;
+
     text-decoration: none;
+
     font-size: 13px;
+
     font-weight: bold;
+
     letter-spacing: 1px;
+
     transition: 0.3s;
 }
 
@@ -83,9 +107,9 @@ body {
 }
 
 
-/* =====================================
+/* =========================
    HERO
-===================================== */
+========================= */
 
 .hero {
     min-height: 100vh;
@@ -118,17 +142,24 @@ body {
 
 .hero-small {
     color: #ffd400;
+
     font-size: 18px;
+
     font-weight: bold;
+
     letter-spacing: 6px;
+
     margin-bottom: 15px;
 }
 
 
 .hero h1 {
     font-size: clamp(55px, 9vw, 115px);
+
     font-weight: 900;
+
     letter-spacing: 8px;
+
     line-height: 1;
 
     text-shadow:
@@ -139,16 +170,22 @@ body {
 
 .hero h2 {
     font-size: clamp(25px, 4vw, 45px);
+
     color: #ffd400;
+
     letter-spacing: 8px;
+
     margin-top: 15px;
 }
 
 
 .hero-slogan {
     font-size: clamp(20px, 3vw, 32px);
+
     font-weight: 900;
+
     letter-spacing: 2px;
+
     margin-top: 30px;
 }
 
@@ -160,28 +197,35 @@ body {
 
 .hero-description {
     color: #ddd;
+
     font-size: 17px;
+
     margin-top: 15px;
 }
 
 
-/* =====================================
+/* =========================
    BUTTONS
-===================================== */
+========================= */
 
 .hero-button,
 .red-button {
     display: inline-block;
+
     margin-top: 30px;
+
     padding: 15px 30px;
 
     background: #e00000;
+
     border: 2px solid #e00000;
 
     color: #fff;
+
     text-decoration: none;
 
     font-weight: bold;
+
     letter-spacing: 1px;
 
     transition: 0.3s;
@@ -191,15 +235,18 @@ body {
 .hero-button:hover,
 .red-button:hover {
     background: #ffd400;
+
     border-color: #ffd400;
+
     color: #000;
+
     transform: translateY(-3px);
 }
 
 
-/* =====================================
-   GENERAL SECTIONS
-===================================== */
+/* =========================
+   SECTIONS
+========================= */
 
 section {
     padding: 100px 8%;
@@ -208,8 +255,11 @@ section {
 
 section h2 {
     font-size: clamp(32px, 5vw, 50px);
+
     text-align: center;
+
     line-height: 1.1;
+
     margin-bottom: 55px;
 }
 
@@ -221,34 +271,47 @@ section h2 span {
 
 section h2::after {
     content: "";
+
     display: block;
+
     width: 70px;
+
     height: 4px;
+
     background: #ffd400;
+
     margin: 15px auto 0;
 }
 
 
 .section-label {
     text-align: center;
+
     color: #ffd400;
+
     font-size: 13px;
+
     font-weight: bold;
+
     letter-spacing: 4px;
+
     margin-bottom: 10px;
 }
 
 
-/* =====================================
+/* =========================
    TRAINER
-===================================== */
+========================= */
 
 .trainer {
     min-height: 650px;
+
     background: #080808;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
     gap: 70px;
@@ -262,6 +325,7 @@ section h2::after {
 
 .trainer-text h2 {
     text-align: left;
+
     margin-bottom: 25px;
 }
 
@@ -273,15 +337,20 @@ section h2::after {
 
 .trainer-text h3 {
     color: #ffd400;
+
     font-size: 34px;
+
     margin-bottom: 20px;
 }
 
 
 .trainer-text p:not(.section-label) {
     color: #ccc;
+
     font-size: 17px;
+
     margin-bottom: 20px;
+
     max-width: 650px;
 }
 
@@ -293,14 +362,18 @@ section h2::after {
 
 .trainer-image {
     flex: 1;
+
     display: flex;
+
     justify-content: center;
 }
 
 
 .trainer-image img {
     width: 100%;
+
     max-width: 420px;
+
     height: 500px;
 
     object-fit: cover;
@@ -319,9 +392,9 @@ section h2::after {
 }
 
 
-/* =====================================
+/* =========================
    GYM
-===================================== */
+========================= */
 
 .gym-section {
     background: #000;
@@ -330,9 +403,11 @@ section h2::after {
 
 .gym-content {
     max-width: 1250px;
+
     margin: auto;
 
     display: flex;
+
     align-items: center;
 
     gap: 80px;
@@ -353,7 +428,9 @@ section h2::after {
     position: relative;
 
     width: 100%;
+
     max-width: 600px;
+
     height: 400px;
 
     overflow: hidden;
@@ -367,6 +444,7 @@ section h2::after {
 
 .slider img {
     width: 100%;
+
     height: 100%;
 
     object-fit: cover;
@@ -379,10 +457,6 @@ section h2::after {
 }
 
 
-/* =====================================
-   SLIDER ARROWS
-===================================== */
-
 .slider-arrow {
     position: absolute;
 
@@ -391,6 +465,7 @@ section h2::after {
     transform: translateY(-50%);
 
     width: 48px;
+
     height: 65px;
 
     border: none;
@@ -424,18 +499,20 @@ section h2::after {
 }
 
 
-/* DOTS */
-
 .slider-dots {
     display: flex;
+
     justify-content: center;
+
     gap: 7px;
+
     margin-top: 15px;
 }
 
 
 .dot {
     width: 8px;
+
     height: 8px;
 
     border-radius: 50%;
@@ -448,11 +525,10 @@ section h2::after {
 
 .dot.active {
     background: #e00000;
+
     transform: scale(1.4);
 }
 
-
-/* GYM TEXT */
 
 .gym-text {
     flex: 1;
@@ -461,6 +537,7 @@ section h2::after {
 
 .gym-text h2 {
     text-align: left;
+
     margin-bottom: 25px;
 }
 
@@ -472,35 +549,44 @@ section h2::after {
 
 .gym-text h3 {
     color: #ffd400;
+
     font-size: 23px;
+
     line-height: 1.4;
+
     margin-bottom: 25px;
 }
 
 
 .gym-text p:not(.section-label) {
     color: #ccc;
+
     font-size: 17px;
+
     margin-bottom: 20px;
 }
 
 
-/* =====================================
+/* =========================
    TIMINGS
-===================================== */
+========================= */
 
 .timings {
     background: #080808;
+
     text-align: center;
 }
 
 
 .timings-container {
     max-width: 1150px;
+
     margin: auto;
 
     display: flex;
+
     gap: 25px;
+
     justify-content: center;
 }
 
@@ -535,13 +621,16 @@ section h2::after {
 
 .timing-icon {
     font-size: 40px;
+
     margin-bottom: 15px;
 }
 
 
 .timing-box h3 {
     color: #e00000;
+
     font-size: 26px;
+
     letter-spacing: 2px;
 }
 
@@ -553,40 +642,49 @@ section h2::after {
 
 .timing-title {
     color: #999;
+
     font-size: 13px;
+
     letter-spacing: 2px;
+
     margin: 10px 0 20px;
 }
 
 
 .time {
     color: #fff;
+
     font-size: 22px;
+
     font-weight: bold;
 }
 
 
 .time span {
     color: #e00000;
+
     margin: 0 5px;
 }
 
 
-/* =====================================
-   MEMBERSHIP PLANS
-===================================== */
+/* =========================
+   PLANS
+========================= */
 
 .plans {
     background: #000;
+
     text-align: center;
 }
 
 
 .plans-container {
     max-width: 1200px;
+
     margin: auto;
 
     display: flex;
+
     justify-content: center;
 
     gap: 30px;
@@ -599,6 +697,7 @@ section h2::after {
     position: relative;
 
     flex: 1;
+
     max-width: 360px;
 
     padding: 40px 30px;
@@ -613,12 +712,14 @@ section h2::after {
 
 .plan:hover {
     transform: translateY(-10px);
+
     border-color: #e00000;
 }
 
 
 .plan.featured {
     border: 2px solid #ffd400;
+
     transform: scale(1.05);
 }
 
@@ -627,8 +728,6 @@ section h2::after {
     transform: scale(1.05) translateY(-10px);
 }
 
-
-/* PLAN TITLE */
 
 .plan-top {
     color: #ffd400;
@@ -642,10 +741,6 @@ section h2::after {
     margin-bottom: 25px;
 }
 
-
-/* =====================================
-   PRICES
-===================================== */
 
 .price-row {
     display: flex;
@@ -711,8 +806,6 @@ section h2::after {
 }
 
 
-/* FEATURES */
-
 .plan ul {
     list-style: none;
 
@@ -730,8 +823,6 @@ section h2::after {
     color: #ddd;
 }
 
-
-/* PLAN BUTTON */
 
 .plan-button {
     display: block;
@@ -752,16 +843,16 @@ section h2::after {
 
 .plan-button:hover {
     background: #ffd400;
+
     color: #000;
 }
 
-
-/* POPULAR */
 
 .popular {
     position: absolute;
 
     top: -15px;
+
     left: 50%;
 
     transform: translateX(-50%);
@@ -778,18 +869,20 @@ section h2::after {
 }
 
 
-/* =====================================
+/* =========================
    CONTACT
-===================================== */
+========================= */
 
 .contact {
     background: #080808;
+
     text-align: center;
 }
 
 
 .contact-container {
     max-width: 1000px;
+
     margin: auto;
 
     display: flex;
@@ -815,12 +908,14 @@ section h2::after {
 
 .contact-box:hover {
     border-color: #e00000;
+
     transform: translateY(-5px);
 }
 
 
 .contact-icon {
     font-size: 38px;
+
     margin-bottom: 10px;
 }
 
@@ -856,8 +951,6 @@ section h2::after {
 }
 
 
-/* CONTACT BUTTONS */
-
 .contact-buttons {
     display: flex;
 
@@ -889,7 +982,9 @@ section h2::after {
 .contact-button.call,
 .contact-button.google {
     background: #e00000;
+
     border-color: #e00000;
+
     color: #fff;
 }
 
@@ -897,7 +992,9 @@ section h2::after {
 .contact-button.whatsapp,
 .contact-button.indrive {
     background: #ffd400;
+
     border-color: #ffd400;
+
     color: #000;
 }
 
@@ -913,9 +1010,9 @@ section h2::after {
 }
 
 
-/* =====================================
+/* =========================
    FOOTER
-===================================== */
+========================= */
 
 footer {
     padding: 35px 20px;
@@ -962,9 +1059,9 @@ footer .copyright {
 }
 
 
-/* =====================================
-   TABLETS
-===================================== */
+/* =========================
+   TABLET
+========================= */
 
 @media (max-width: 950px) {
 
@@ -972,26 +1069,21 @@ footer .copyright {
         padding: 8px 3%;
     }
 
-
     .navbar nav {
         gap: 15px;
     }
-
 
     .navbar nav a {
         font-size: 11px;
     }
 
-
     .gym-content {
         gap: 40px;
     }
 
-
     .slider {
         height: 350px;
     }
-
 
     .price strong {
         font-size: 17px;
@@ -1000,51 +1092,85 @@ footer .copyright {
 }
 
 
-/* =====================================
-   MOBILE
-===================================== */
+/* =========================
+   MOBILE NAVIGATION
+========================= */
 
 @media (max-width: 700px) {
 
-    /* NAVIGATION */
-
     .navbar {
-        min-height: 70px;
+        min-height: 65px;
 
-        padding: 8px 10px;
+        padding: 8px 15px;
 
-        flex-direction: column;
+        flex-direction: row;
 
-        gap: 8px;
+        gap: 0;
     }
 
 
     .logo img {
         width: 135px;
+
         height: 48px;
     }
 
 
+    .menu-toggle {
+        display: block;
+    }
+
+
     .navbar nav {
+        display: none;
+
+        position: absolute;
+
+        top: 65px;
+
+        left: 0;
+
         width: 100%;
 
-        justify-content: center;
+        background: rgba(0, 0, 0, 0.98);
 
-        gap: 8px 12px;
+        border-bottom: 2px solid #e00000;
 
-        flex-wrap: wrap;
+        padding: 15px 0;
+    }
+
+
+    .navbar nav.active {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 0;
     }
 
 
     .navbar nav a {
-        font-size: 9px;
+        width: 100%;
+
+        text-align: center;
+
+        padding: 13px;
+
+        font-size: 12px;
+
+        border-bottom: 1px solid #222;
+    }
+
+
+    .navbar nav a:last-child {
+        border-bottom: none;
     }
 
 
     /* HERO */
 
     .hero {
-        padding-top: 150px;
+        padding-top: 110px;
     }
 
 
@@ -1122,12 +1248,14 @@ footer .copyright {
 
     .slider {
         max-width: 100%;
+
         height: 320px;
     }
 
 
     .gym-text {
         width: 100%;
+
         text-align: center;
     }
 
@@ -1217,11 +1345,16 @@ footer .copyright {
 }
 
 
-/* =====================================
+/* =========================
    SMALL PHONES
-===================================== */
+========================= */
 
 @media (max-width: 400px) {
+
+    .logo img {
+        width: 120px;
+    }
+
 
     .hero h1 {
         font-size: 38px;
